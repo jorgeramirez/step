@@ -1,0 +1,14 @@
+<s> ADELANTE </s>
+<s> ATRAS </s>
+<s> ABAJO </s>
+<s> ARRIBA </s>
+<s> PASO UNO </s>
+<s> PASO DOS </s>
+<s> PASO TRES </s>
+<s> PASO CUATRO </s>
+<s> PASO CINCO </s>
+<s> PASO SEIS </s>
+<s> PASO SIETE </s>
+<s> PASO OCHO </s>
+<s> PASO NUEVE </s>
+<s> PASO DIEZ </s>

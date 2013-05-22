@@ -1,0 +1,14 @@
+adelante
+atras
+abajo
+arriba
+paso uno
+paso dos
+paso tres
+paso cuatro
+paso cinco
+paso seis
+paso siete
+paso ocho
+paso nueve
+paso diez
