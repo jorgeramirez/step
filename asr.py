@@ -75,7 +75,7 @@ class Recognizer(object):
         Send the final result to the registered listeners for the
         asr::result-ready event.
         """
-        self.__asr_resume()
+        self.__asr_pause()
         params = { "text" : hyp, "uttid" : uttid }
         
         for listener in self.__listeners["asr::result-ready"]:
