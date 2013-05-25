@@ -26,36 +26,36 @@ COL = 1
 class Board:
     """Represents the board."""
 
-    __commands = { 
+    _commands = { 
         "adelante" : [0, 1], "atras" : [0, -1],
         "abajo" : [1, 0], "arriba" : [-1, 0]
     }
 
-    __numbers = {
+    _numbers = {
         "uno": 1, "dos": 2, "tres": 3, "cuatro": 4, "cinco": 5,
         "seis": 6, "siete": 7, "ocho": 8, "nueve": 9, "diez": 10
     }
 
     def __init__(self, size=10):
-        self.__size = size
-        self.__step_size = STEP_SIZE
-        self.__posr = 0
-        self.__posc = 0
-        self.__initialize()
+        self._size = size
+        self._step_size = STEP_SIZE
+        self._posr = 0
+        self._posc = 0
+        self._initialize()
 
-    def __initialize(self):
-        self.__board = [[0] * self.__size for _ in xrange(self.__size)]
-        self.__board[self.__posr][self.__posc] = 1
+    def _initialize(self):
+        self._board = [[0] * self._size for _ in xrange(self._size)]
+        self._board[self._posr][self._posc] = 1
    
     def draw(self):
         """
         Draw the current state of the board. Basic CLI implementation, override
         this for a more complex drawing logic (e.g. GTK-based).
         """
-        for i in xrange(self.__size):
-            for j in xrange(self.__size):
+        for i in xrange(self._size):
+            for j in xrange(self._size):
                 cell = EMPTY_CELL
-                if self.__board[i][j] == 1:
+                if self._board[i][j] == 1:
                     cell = GUY
                 print cell,
             print
@@ -68,12 +68,12 @@ class Board:
         if command.find("paso") > -1:
             parsed = command.split()
             if len(parsed) == 2:
-                self.__step_size = self.__numbers[parsed[1]]
-        elif self.__commands.has_key(command):
-            self.__board[self.__posr][self.__posc] = 0
-            self.__posr = (self.__posr + self.__commands[command][ROW] * self.__step_size) % self.__size
-            self.__posc = (self.__posc + self.__commands[command][COL] * self.__step_size) % self.__size
-            self.__board[self.__posr][self.__posc] = 1
+                self._step_size = self._numbers[parsed[1]]
+        elif self._commands.has_key(command):
+            self._board[self._posr][self._posc] = 0
+            self._posr = (self._posr + self._commands[command][ROW] * self._step_size) % self._size
+            self._posc = (self._posc + self._commands[command][COL] * self._step_size) % self._size
+            self._board[self._posr][self._posc] = 1
 
 
 if __name__ == "__main__":
