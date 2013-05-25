@@ -18,7 +18,8 @@ class GuiBoard(Board):
         surfaceSz = self._size * sq_sz     # Adjust to exact multiple of sq_sz
 
         # Create the surface of (width, height), and its window.
-        pygame.display.set_caption("Simulador")    
+        caption = "TuxStep - Paso: " + str(self._step_size)
+        pygame.display.set_caption(caption)    
         surface = pygame.display.set_mode((surfaceSz, surfaceSz))
 
 
