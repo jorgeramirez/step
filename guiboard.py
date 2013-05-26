@@ -41,7 +41,9 @@ class GuiBoard(Board):
                 
             
             if not q.empty():
-                self.move(q.get())
+                cmd = q.get()
+                self.move(cmd)
+                pygame.display.set_caption("TuxStep - Paso: %d - Comando: %s" % (self._step_size, cmd))    
           
             # Draw a fresh background (a blank chess board)
             for row in range(self._size):         # Draw each row of the board.
@@ -63,4 +65,3 @@ class GuiBoard(Board):
             pygame.time.delay(50)
             
     pygame.quit()
-
