@@ -2,7 +2,9 @@
 
 Simple demo using Pocketsphinx and GStreamer
 
-![screenshot](https://raw.github.com/jorgeramirez/step/master/screenshot.png)
+<p style="text-align: center;">
+  <img src="https://raw.github.com/jorgeramirez/step/master/screenshot.png" style="width: 400px;" />
+</p>
 
 *step* recognizes five basic commands in spanish:
 
