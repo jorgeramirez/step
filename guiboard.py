@@ -41,8 +41,7 @@ class GuiBoard(Board):
                 
             
             if not q.empty():
-                e = q.get()
-                self.move(e["command"])
+                self.move(q.get())
           
             # Draw a fresh background (a blank chess board)
             for row in range(self._size):         # Draw each row of the board.
